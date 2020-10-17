@@ -29,6 +29,6 @@ gcloud run deploy plone --image gcr.io/$CLOUD_RUN_PROJECT_NAME/plone --platform 
 
 # Things to do next
 This looks very promising. I think we could get a lot done with a bit more attention.
-- Still need to figure out serving properly over https
+- Still need to figure out serving properly over https (will require a bit of virtual host monster "gymnastics")
 - Need a sensible approach to loading add-ons
 - Might be nice to make this a quick way to spin up a Volto backend
