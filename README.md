@@ -32,7 +32,7 @@ gcloud run deploy plone --image gcr.io/$CLOUD_RUN_PROJECT_NAME/plone --platform 
 
 # Things to do next
 This looks very promising. I think we could get a lot done with a bit more attention.
-- Still need to figure out serving properly over https (will require a bit of virtual host monster "gymnastics")
+- Still need to figure out serving properly over https (will require a bit of virtual host monster "gymnastics" see:https://community.plone.org/t/ttw-configuration-of-virtual-hosting-mapping-to-serve-plone-site-over-https/846/2?u=pigeonflight)
 - Need a sensible approach to loading add-ons
 - Might be nice to make this a quick way to spin up a Volto backend
-- Provide a solution for persistent storage (Plan A: provide a persistent storage option that replaces the standard Data.fs and Blobstorage. Plan B:sync the Data.fs and Blobs at intervals, then resync when respawned)
+- Provide a solution for persistent storage (Plan A: provide a proxy storage option for the Data.fs and Blobstorage (see: https://github.com/collective/collective.s3blobs) . Plan B:sync the Data.fs and Blobs at intervals, then resync when respawned)
