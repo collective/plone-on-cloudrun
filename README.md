@@ -3,8 +3,11 @@ This is just a quick proof of concept.
 Was working on something else for Cloudrun and figured Plone on docker
 should be easy to get running.
 
+# Warning
+This does not provide persistent storage at the moment. This is only useful for a demo.
+
 # Assumptions
-You have a gcloud account and have created a project
+You have a gcloud account and have created a project.
 
 # Quick start
 ## Step 1 - Install gcloud
@@ -32,3 +35,4 @@ This looks very promising. I think we could get a lot done with a bit more atten
 - Still need to figure out serving properly over https (will require a bit of virtual host monster "gymnastics")
 - Need a sensible approach to loading add-ons
 - Might be nice to make this a quick way to spin up a Volto backend
+- Provide a solution for persistent storage (Plan A: provide a persistent storage option that replaces the standard Data.fs and Blobstorage. Plan B:sync the Data.fs and Blobs at intervals, then resync when respawned)
