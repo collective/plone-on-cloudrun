@@ -1,0 +1,18 @@
+[buildout]
+extends = develop.cfg
+eggs +=
+  RelStorage
+  psycopg2
+  python-memcached
+zcml +=
+
+[instance]
+rel-storage =
+  type postgresql
+  host localhost
+  dbname databasename
+  user databaseuser
+  password databasepassword
+
+[versions]
+RelStorage = 3.4.0
