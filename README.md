@@ -4,9 +4,6 @@ Was working on something else for Cloudrun and figured Plone on docker
 should be easy to get running.
 This relies on RelStorage and postgresql for persistent storage (try using CloudSQL for this)
 
-# Warning
-This does not provide persistent storage at the moment. This is only useful for a demo.
-
 # Assumptions
 You have a gcloud account and have created a project.
 You have a postgresql DB and the related credentials.
