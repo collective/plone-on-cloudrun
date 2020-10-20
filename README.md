@@ -12,10 +12,18 @@ You have a postgresql DB and the related credentials.
 ## Step 1 - Install gcloud
 You can get it here: https://cloud.google.com/sdk/docs/install
 
-## Step 2 -  Initialize gcloud
+## Step 2 -  Initialize gcloud and gcloud defaults
 ```
 gcloud init
 ```
+You'll be using fully managed Cloud run and you need to set a default region.
+See a list of common regions here: https://cloud.google.com/run/docs/locations
+The following command sets the default you need if you were in the `us-east` region.
+```
+gcloud config set run/platform managed
+gcloud config set run/region us-east1
+```
+
 ## Step 3 - Checkout and edit site.cfg
 ```
 git clone https://github.com/collective/plone-on-cloudrun
@@ -37,7 +45,7 @@ rel-storage =
 ```
 export CLOUDRUN_PROJECT_NAME=your-project-name
 gcloud builds submit --tag gcr.io/$CLOUD_RUN_PROJECT_NAME/plone --timeout=3000
-gcloud run deploy plone --image gcr.io/$CLOUD_RUN_PROJECT_NAME/plone --platform managed --port 8080 --memory 1Gi --timeout 1m30s
+gcloud run deploy plone --image gcr.io/$CLOUD_RUN_PROJECT_NAME/plone --port 8080 --memory 1Gi --timeout 1m30s
 ```
 
 # Things to do next

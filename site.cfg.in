@@ -5,7 +5,6 @@ eggs +=
   psycopg2
   python-memcached
 zcml +=
-
 [instance]
 rel-storage =
   type postgresql
@@ -13,6 +12,8 @@ rel-storage =
   dbname databasename
   user databaseuser
   password databasepassword
+  blob-dir ${buildout:directory}/var/blobstorage
+  blob-cache-size 512mb
 
 [versions]
 RelStorage = 3.4.0
