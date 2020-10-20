@@ -18,7 +18,7 @@ gcloud init
 ```
 You'll be using fully managed Cloud run and you need to set a default region.
 See a list of common regions here: https://cloud.google.com/run/docs/locations
-The following command sets the default you need if you were in the `us-east` region.
+We do this with the commands below. Note that the default region is set to `us-east1`.
 ```
 gcloud config set run/platform managed
 gcloud config set run/region us-east1
