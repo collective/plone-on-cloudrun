@@ -43,7 +43,7 @@ rel-storage =
 
 ## Step 4 - Deploy
 ```
-export CLOUDRUN_PROJECT_NAME=your-project-name
+export CLOUD_RUN_PROJECT_NAME=your-project-name
 gcloud builds submit --tag gcr.io/$CLOUD_RUN_PROJECT_NAME/plone --timeout=3000
 gcloud run deploy plone --image gcr.io/$CLOUD_RUN_PROJECT_NAME/plone --port 8080 --memory 1Gi --timeout 1m30s
 ```
